@@ -21,6 +21,7 @@ header {
     display: flex;
     justify-content: space-between;
     background-color: white;
+    padding: 16px;
 }
 
 .left {
@@ -30,13 +31,12 @@ header {
 
 .left img {
     width: 50px;
-    margin: 20px;
+    margin: 0 5px;
 }
 
 .right {
     display: flex;
     align-items: center;
-    margin: 20px;
 }
 
 button {
@@ -61,3 +61,4 @@ main {
 .footer-text {
     padding: 20px;
 }
+
