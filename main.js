@@ -1,9 +1,9 @@
 const btn = document.querySelector(`.btn`);
-const firstText = document.querySelector(`.first-text`);
+const mainContent = document.querySelector(`.main-content`);
 
 btn.addEventListener(`click`, () => {
     console.log(`wuf`);
-    firstText.innerHTML = ``;
+    mainContent.innerHTML = ``;
     const play = document.getElementById(`difficulty`).value;
     console.log(play);
 
@@ -33,7 +33,31 @@ btn.addEventListener(`click`, () => {
     console.log(box);
     console.log(boxPerSide);
 
-    for(let i = 0; i < box; i++) {
-        
+    // BISOGNA CREARE IL CONTAINER ESTERNO
+
+    const container = document.createElement(`div`);
+    container.classList.add(`grid`);
+
+    mainContent.append(container);
+
+    for(let i = 1; i <= box; i++) {
+
+        const number = i;
+        console.log(number);
+
+        const nodo = document.createElement(`div`);
+        nodo.classList.add(`box`);
+        nodo.style.width = `calc(100% / ${boxPerSide})`;
+        nodo.style.height = `calc(100% / ${boxPerSide})`;
+
+        const span = document.createElement(`span`);
+        span.append(number);
+        nodo.append(span);
+
+        container.append(nodo);
+
+        nodo.addEventListener(`click`, function() {
+            this.classList.add(`click`);
+        });
     }
 });

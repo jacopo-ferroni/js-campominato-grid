@@ -62,3 +62,23 @@ main {
     padding: 20px;
 }
 
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+    height: 500px;
+    border: 2px solid black;
+    margin: 60px auto;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 2px solid black;
+}
+
+.click {
+    background-color: #6495ed;
+}
